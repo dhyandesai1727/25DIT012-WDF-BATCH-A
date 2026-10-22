@@ -1,0 +1,120 @@
+StudentHub Project Folder Structure:
+
+wdf/
+|-- index.html                 [Master Practical Navigation Hub]
+|-- Practical-01/              [Initiation, Requirements, Wireframes, Sitemap]
+|   |-- README.md
+|   |-- requirements.md
+|   |-- sitemap.html
+|   |-- wireframes.html
+|   `-- project_structure.txt
+|-- Practical-02/              [Semantic HTML5 & Accessibility-Ready Pages]
+|   |-- index.html
+|   |-- about.html
+|   |-- register.html
+|   |-- login.html
+|   |-- dashboard.html
+|   |-- events.html
+|   |-- profile.html
+|   |-- contact.html
+|   |-- admin.html
+|   |-- faq.html
+|   |-- feedback.html
+|   `-- accessibility_checklist.md
+|-- Practical-03/              [Responsive UI with CSS Grid, Flexbox & Media Queries]
+|   |-- index.html
+|   |-- about.html
+|   |-- register.html
+|   |-- dashboard.html
+|   |-- events.html
+|   `-- style.css
+|-- Practical-04/              [DOM Manipulation, Events, Accordion, Slider, Dark Mode]
+|   |-- index.html
+|   |-- script.js
+|   `-- style.css
+|-- Practical-05/              [Registration Form with JS Regex Validation & Strength Meter]
+|   |-- index.html
+|   |-- validation.js
+|   `-- style.css
+|-- Practical-06/              [Fetch API, External JSON, Search, Filter, Pagination]
+|   |-- index.html
+|   |-- app.js
+|   |-- style.css
+|   `-- data/
+|       |-- events.json
+|       |-- students.json
+|       `-- faqs.json
+|-- Practical-07/              [PHP Form Processing, Server-Side Validation, CSV/JSON Storage]
+|   |-- index.php
+|   |-- process.php
+|   |-- view_records.php
+|   |-- style.css
+|   |-- submissions.csv
+|   `-- submissions.json
+|-- Practical-08/              [MySQL Schema Design, ER Model, mysqli Database Connection]
+|   |-- studenthub.sql
+|   |-- db.php
+|   |-- test_db.php
+|   |-- er_diagram.html
+|   `-- README.md
+|-- Practical-09/              [Secure Registration, Duplicate Check, password_hash]
+|   |-- db.php
+|   |-- register.php
+|   |-- login.php
+|   |-- style.css
+|   `-- users_schema.sql
+|-- Practical-10/              [Sessions, Role-Based Access, Timeout & Remember-Me]
+|   |-- db.php
+|   |-- login.php
+|   |-- logout.php
+|   |-- auth_check.php
+|   |-- dashboard_student.php
+|   |-- dashboard_admin.php
+|   `-- style.css
+|-- Practical-11/              [Student Management CRUD, Search, Filter & MySQLi]
+|   |-- db.php
+|   |-- index.php
+|   |-- add_student.php
+|   |-- edit_student.php
+|   |-- delete_student.php
+|   |-- students_seed.sql
+|   `-- style.css
+|-- Practical-12/              [Event Management CRUD, Poster Upload & File Validation]
+|   |-- db.php
+|   |-- index.php
+|   |-- add_event.php
+|   |-- edit_event.php
+|   |-- delete_event.php
+|   |-- style.css
+|   `-- uploads/
+|-- Practical-13/              [PHP JSON REST API & AJAX Fetch-Based CRUD without Reload]
+|   |-- index.html
+|   |-- app.js
+|   |-- style.css
+|   `-- api/
+|       `-- events_api.php
+|-- Practical-14/              [Admin Dashboard, SQL Aggregations, RBAC Dynamic Menu & Audit Logs]
+|   |-- db.php
+|   |-- admin_dashboard.php
+|   |-- audit_logs.php
+|   |-- style.css
+|   `-- setup_practical14.sql
+`-- Practical-15/              [Final Full-Stack Integrated Portal, Testing & Deployment]
+    |-- index.php
+    |-- db.php
+    |-- login.php
+    |-- register.php
+    |-- logout.php
+    |-- student_dashboard.php
+    |-- admin_dashboard.php
+    |-- student_crud.php
+    |-- event_crud.php
+    |-- ajax_events.html
+    |-- faq.html
+    |-- contact.php
+    |-- style.css
+    |-- uploads/
+    |-- api/
+    |-- studenthub_master.sql
+    |-- README.md
+    `-- TEST_REPORT.md

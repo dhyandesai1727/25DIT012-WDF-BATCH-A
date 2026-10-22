@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 1 - StudentHub Sitemap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #1e3a8a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            transition: all 0.5s;
+        }
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+            transition: all 0.5s;
+        }
+        .node {
+            border: 2px solid #2563eb;
+            padding: 10px 14px;
+            background: #eff6ff;
+            color: #1e3a8a;
+            font-weight: bold;
+            border-radius: 6px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .node small {
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            color: #4b5563;
+        }
+        .node.root {
+            background: #1e3a8a;
+            color: #fff;
+            border-color: #1e3a8a;
+            font-size: 16px;
+        }
+        .node.root small { color: #cbd5e1; }
+        .node.sub {
+            background: #f1f5f9;
+            border-color: #64748b;
+            color: #0f172a;
+        }
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 25px;
+        }
+        .card {
+            border: 1px solid #e2e8f0;
+            padding: 16px;
+            border-radius: 6px;
+            background: #fafafa;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #1e3a8a;
+            font-size: 16px;
+        }
+        .card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+        .card li { margin-bottom: 6px; }
+        .badge {
+            background: #2563eb;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Practical 1: StudentHub Sitemap & Navigation Architecture</h1>
+        <p>This sitemap visualizes the information architecture and navigation hierarchy of the StudentHub portal across guest, student, and admin user journeys.</p>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <div class="node root" style="display:inline-block; margin-bottom: 25px;">
+                Home Page (index.html)
+                <small>Global Entry Point & Welcome Hub</small>
+            </div>
+        </div>
+
+        <h2>Module-Wise Page Breakdown</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <h3>1. Public Information</h3>
+                <ul>
+                    <li><strong>index.html:</strong> Hero banner, quick facts, announcements</li>
+                    <li><strong>about.html:</strong> University overview, mission, faculty directory</li>
+                    <li><strong>faq.html:</strong> Interactive collapsible FAQ accordion</li>
+                    <li><strong>contact.html:</strong> Campus address, contact info, enquiry form</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>2. Authentication</h3>
+                <ul>
+                    <li><strong>register.html:</strong> Student registration with live regex validation</li>
+                    <li><strong>login.html:</strong> Role-based login (Student / Admin)</li>
+                    <li><strong>logout.php:</strong> Session destruction & redirect</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>3. Student Portal</h3>
+                <ul>
+                    <li><strong>dashboard.html:</strong> Student stats, quick notifications</li>
+                    <li><strong>profile.html:</strong> Student profile details and course info</li>
+                    <li><strong>feedback.html:</strong> Student campus feedback form</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>4. Campus Events</h3>
+                <ul>
+                    <li><strong>events.html:</strong> Public events listing with category filters</li>
+                    <li><strong>event_details.html:</strong> Individual event poster, venue, date</li>
+                    <li><strong>ajax_events.html:</strong> Live Fetch-API driven events list</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>5. Admin Panel <span class="badge">Restricted</span></h3>
+                <ul>
+                    <li><strong>admin.html:</strong> Admin overview, metrics, student/event counters</li>
+                    <li><strong>students_manage.php:</strong> Full Student CRUD (Search/Filter)</li>
+                    <li><strong>events_manage.php:</strong> Event CRUD with poster file upload</li>
+                    <li><strong>audit_logs.php:</strong> Admin action history log</li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="margin-top: 30px; text-align: center;">
+            <a href="wireframes.html" style="color: #2563eb; font-weight: bold; text-decoration: underline;">View Low-Fidelity Wireframes &rarr;</a>
+        </p>
+    </div>
+</body>
+</html>
