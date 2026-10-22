@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2026-10-20 10:15:00",
+    "name": "Rahul Patel",
+    "email": "rahul.patel@charusat.edu.in",
+    "mobile": "9876543210",
+    "course": "IT",
+    "year": "3rd",
+    "gender": "Male"
+  },
+  {
+    "timestamp": "2026-10-21 14:30:00",
+    "name": "Diya Joshi",
+    "email": "diya.joshi@charusat.edu.in",
+    "mobile": "9123456780",
+    "course": "CE",
+    "year": "2nd",
+    "gender": "Female"
+  }
+]
