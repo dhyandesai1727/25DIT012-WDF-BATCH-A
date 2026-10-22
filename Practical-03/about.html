@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Responsive About Us | Practical 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">StudentHub</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="register.html" class="nav-link">Register</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="color: var(--primary); margin-bottom: 20px;">About StudentHub Responsive Design</h1>
+        
+        <div class="grid-2">
+            <div class="card">
+                <h2 class="card-title">Flexbox Layout Usage</h2>
+                <p class="card-text">Flexbox is utilized for 1-dimensional layouts. In this portal, the top navigation bar, header buttons, and hero action calls adapt gracefully between stacked vertical columns on mobile and inline horizontal rows on desktop screens.</p>
+            </div>
+            <div class="card">
+                <h2 class="card-title">CSS Grid Layout Usage</h2>
+                <p class="card-text">CSS Grid is applied for 2-dimensional layouts where both rows and columns must align cleanly. Our event gallery and dashboard analytics utilize <code>grid-template-columns</code> to rearrange cards from single column on phones to 2 or 3 columns on desktops.</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+            <h2 class="card-title">Breakpoints & Mobile-First Strategy</h2>
+            <p class="card-text">By designing mobile-first, styles default to a clean, easy-to-read single column layout. As the screen viewport width expands past 640px (tablets) and 900px (desktops), media queries seamlessly rearrange components without horizontally overflowing.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub | CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>

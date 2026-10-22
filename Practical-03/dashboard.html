@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Responsive Dashboard | Practical 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">StudentHub</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="register.html" class="nav-link">Register</a></li>
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="color: var(--primary); margin-bottom: 8px;">Student Dashboard</h1>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">Welcome back, Student ID: 25DIT012</p>
+
+        <!-- CSS Grid 3 Column Metrics -->
+        <div class="grid-3">
+            <div class="card" style="border-left: 4px solid #2563eb;">
+                <h3 style="font-size: 14px; color: var(--text-muted);">Registered Events</h3>
+                <p style="font-size: 28px; font-weight: bold; color: #2563eb; margin: 8px 0;">4</p>
+                <span style="font-size: 12px; color: #16a34a;">&bull; 2 upcoming this week</span>
+            </div>
+
+            <div class="card" style="border-left: 4px solid #10b981;">
+                <h3 style="font-size: 14px; color: var(--text-muted);">Workshops Attended</h3>
+                <p style="font-size: 28px; font-weight: bold; color: #10b981; margin: 8px 0;">7</p>
+                <span style="font-size: 12px; color: var(--text-muted);">All certificates earned</span>
+            </div>
+
+            <div class="card" style="border-left: 4px solid #f59e0b;">
+                <h3 style="font-size: 14px; color: var(--text-muted);">Pending Approvals</h3>
+                <p style="font-size: 28px; font-weight: bold; color: #f59e0b; margin: 8px 0;">1</p>
+                <span style="font-size: 12px; color: #d97706;">Project Expo 2026</span>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h2 class="card-title">Recent Event Activities</h2>
+                <ul style="padding-left: 20px; font-size: 14px; line-height: 2;">
+                    <li>Registered for <strong>Hackathon Cognizance 2026</strong></li>
+                    <li>Submitted abstract for <strong>Web Design Sprint</strong></li>
+                    <li>Attended seminar on <strong>Cloud Frameworks</strong></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Department Notices</h2>
+                <p class="card-text">Submission deadline for WDF Practical 1 to 5 is scheduled for October 30th. Ensure all GitHub repositories and code files are up to date.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub | CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>
