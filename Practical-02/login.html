@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Login | Practical 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">StudentHub</a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html" class="active">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="index.html">Home</a> &gt; <span>User Login</span>
+    </nav>
+
+    <main id="main-content">
+        <section aria-labelledby="login-heading" style="max-width: 480px; margin: auto;">
+            <h1 id="login-heading" class="page-title">Sign In to StudentHub</h1>
+            
+            <form action="dashboard.html" method="get">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address or Student ID:</label>
+                    <input type="text" id="loginEmail" name="email" required placeholder="student@charusat.edu.in">
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginRole">Select Role:</label>
+                    <select id="loginRole" name="role" required>
+                        <option value="student">Student</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="rememberMe" name="remember">
+                    <label for="rememberMe" style="display:inline;">Remember me on this browser</label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" style="width: 100%;">Log In</button>
+                </div>
+
+                <p style="text-align: center; font-size: 13px; margin-top: 15px;">
+                    Don't have an account? <a href="register.html">Register here</a>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub - CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>

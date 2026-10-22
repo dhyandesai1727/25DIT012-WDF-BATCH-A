@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Feedback | Practical 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">StudentHub</a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html" class="active">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="index.html">Home</a> &gt; <span>Feedback</span>
+    </nav>
+
+    <main id="main-content">
+        <section aria-labelledby="feedback-heading">
+            <h1 id="feedback-heading" class="page-title">Student Portal & Event Feedback</h1>
+            <p>Your feedback helps us improve campus events and portal usability.</p>
+
+            <form action="index.html" method="get">
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" name="name" required placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="ratingCategory">Category to Review:</label>
+                    <select id="ratingCategory" name="category" required>
+                        <option value="portal">StudentHub Web Experience</option>
+                        <option value="event">Campus Event Organization</option>
+                        <option value="facilities">Lab & Infrastructure Facilities</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="satisfactionRating">Overall Satisfaction Rating (1 to 5):</label>
+                    <select id="satisfactionRating" name="rating" required>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Good</option>
+                        <option value="3">3 - Average</option>
+                        <option value="2">2 - Needs Improvement</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Detailed Suggestions / Comments:</label>
+                    <textarea id="comments" name="comments" rows="5" required placeholder="Write your thoughts here..."></textarea>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub - CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Contact Us | Practical 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">StudentHub</a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="index.html">Home</a> &gt; <span>Contact Us</span>
+    </nav>
+
+    <main id="main-content">
+        <section aria-labelledby="contact-heading">
+            <h1 id="contact-heading" class="page-title">Contact & Help Desk</h1>
+            <p>Have inquiries regarding events, registration, or academic queries? Reach out to the IT department.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div>
+                    <h2>Campus Address</h2>
+                    <address style="font-style: normal; line-height: 1.8;">
+                        <strong>Charotar University of Science and Technology (CHARUSAT)</strong><br>
+                        Faculty of Technology and Engineering (FTE)<br>
+                        Department of Information Technology<br>
+                        CHARUSAT Campus, Changa - 388421, Anand, Gujarat, India<br>
+                        Email: <a href="mailto:info.it@charusat.ac.in">info.it@charusat.ac.in</a><br>
+                        Phone: +91 2697 265011 / 265021
+                    </address>
+                </div>
+
+                <div>
+                    <h2>Send Us a Message</h2>
+                    <form action="feedback.html" method="get">
+                        <div class="form-group">
+                            <label for="contactName">Your Name:</label>
+                            <input type="text" id="contactName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Your Email:</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message / Query:</label>
+                            <textarea id="contactMessage" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub - CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>

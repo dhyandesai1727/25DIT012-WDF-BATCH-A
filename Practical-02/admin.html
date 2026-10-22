@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Admin Panel | Practical 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">StudentHub Admin</a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="admin.html" class="active">Admin</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="index.html">Home</a> &gt; <span>Admin Management</span>
+    </nav>
+
+    <main id="main-content">
+        <section aria-labelledby="admin-heading">
+            <h1 id="admin-heading" class="page-title">Administrative Overview & Statistics</h1>
+            <p>Welcome, Administrator. Here is a high-level summary of campus activities and user records.</p>
+            
+            <div style="display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 180px; background: #e0f2fe; padding: 15px; border-radius: 6px; border-left: 5px solid #0284c7;">
+                    <h3>Total Students</h3>
+                    <p style="font-size: 26px; font-weight: bold; color: #0369a1;">1,248</p>
+                </div>
+                <div style="flex: 1; min-width: 180px; background: #fef3c7; padding: 15px; border-radius: 6px; border-left: 5px solid #d97706;">
+                    <h3>Active Events</h3>
+                    <p style="font-size: 26px; font-weight: bold; color: #b45309;">18</p>
+                </div>
+                <div style="flex: 1; min-width: 180px; background: #dcfce7; padding: 15px; border-radius: 6px; border-left: 5px solid #16a34a;">
+                    <h3>Registrations</h3>
+                    <p style="font-size: 26px; font-weight: bold; color: #15803d;">842</p>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="quick-manage">
+            <h2 id="quick-manage">Management Shortcuts</h2>
+            <ul>
+                <li><a href="dashboard.html">View Student Records</a></li>
+                <li><a href="events.html">Review Submitted Event Proposals</a></li>
+                <li><a href="feedback.html">Inspect Student Feedback Submissions</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Admin - CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>

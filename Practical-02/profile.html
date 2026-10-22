@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Profile | Practical 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">StudentHub</a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="index.html">Home</a> &gt; <a href="dashboard.html">Dashboard</a> &gt; <span>My Profile</span>
+    </nav>
+
+    <main id="main-content">
+        <section aria-labelledby="profile-heading">
+            <h1 id="profile-heading" class="page-title">Student Profile</h1>
+            
+            <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+                <div style="width: 100px; height: 100px; background: #cbd5e1; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: #475569; font-weight: bold;" aria-label="Profile picture placeholder">
+                    RP
+                </div>
+                <div>
+                    <h2>Rahul Patel</h2>
+                    <p>Student of B.Tech Information Technology</p>
+                    <p>Email: rahul.it@charusat.edu.in | Mobile: +91 9876543210</p>
+                </div>
+            </div>
+
+            <table aria-label="Academic Records">
+                <caption>Academic Details</caption>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Student Identification Number</td>
+                        <td>25DIT012</td>
+                    </tr>
+                    <tr>
+                        <td>Department</td>
+                        <td>Information Technology (FTE)</td>
+                    </tr>
+                    <tr>
+                        <td>Current Semester</td>
+                        <td>3rd Semester (2026-27)</td>
+                    </tr>
+                    <tr>
+                        <td>CGPA</td>
+                        <td>8.85 / 10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>Active / Regular</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub - CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>

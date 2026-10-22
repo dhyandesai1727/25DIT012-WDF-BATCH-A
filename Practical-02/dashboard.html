@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Student Dashboard | Practical 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">StudentHub</a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="index.html">Home</a> &gt; <span>Student Dashboard</span>
+    </nav>
+
+    <main id="main-content">
+        <section aria-labelledby="dash-welcome">
+            <h1 id="dash-welcome" class="page-title">Welcome back, Rahul Patel!</h1>
+            <p><strong>Student ID:</strong> 25DIT012 | <strong>Department:</strong> Information Technology | <strong>Semester:</strong> 3rd</p>
+        </section>
+
+        <section aria-labelledby="enrolled-events">
+            <h2 id="enrolled-events">My Registered Campus Events</h2>
+            <table aria-label="Table of enrolled events">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Category</th>
+                        <th>Date & Time</th>
+                        <th>Venue</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cognizance Web Hackathon</td>
+                        <td>Technical</td>
+                        <td>Nov 15, 2026 - 10:00 AM</td>
+                        <td>IT Lab 3</td>
+                        <td><span style="color: green; font-weight: bold;">Confirmed</span></td>
+                    </tr>
+                    <tr>
+                        <td>AI & Data Science Workshop</td>
+                        <td>Technical</td>
+                        <td>Nov 22, 2026 - 02:00 PM</td>
+                        <td>Seminar Hall 1</td>
+                        <td><span style="color: green; font-weight: bold;">Confirmed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <aside aria-label="Notifications">
+            <h2>Campus Announcements</h2>
+            <ul>
+                <li>Submit your practical file for Web Development Frameworks by Friday.</li>
+                <li>Blood donation camp organized by the Red Ribbon Club next Monday.</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub - CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>
