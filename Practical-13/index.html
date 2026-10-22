@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 13 - Asynchronous AJAX CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header-row">
+        <div>
+            <h1>AJAX & Fetch-Based Event CRUD</h1>
+            <p style="font-size: 13px; color: #64748b;">Practical 13: Instant List, Add, Edit & Delete without Full Page Reload</p>
+        </div>
+        <div>
+            <button class="btn btn-success" id="openAddModalBtn">+ Add Event (AJAX)</button>
+        </div>
+    </div>
+
+    <!-- Live Toast Banner -->
+    <div class="toast-msg" id="toastNotice" role="alert"></div>
+
+    <!-- Search Input -->
+    <div class="search-box">
+        <input type="text" id="searchEventInput" placeholder="Live search events by title, category, or venue (with debounce)...">
+    </div>
+
+    <!-- Table of Events -->
+    <div style="overflow-x: auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Date & Time</th>
+                    <th>Venue</th>
+                    <th>Coordinator</th>
+                    <th style="text-align: center;">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="eventsTableBody">
+                <!-- Dynamically populated via Fetch API -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Popup for Add / Edit -->
+<div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-box">
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+        <h2 id="modalTitle" style="color: #1e3a8a; margin-bottom: 15px; font-size: 18px;">Event Details</h2>
+
+        <form id="eventForm">
+            <input type="hidden" id="eventId" name="id">
+            <input type="hidden" id="formAction" name="action" value="add">
+
+            <div class="form-group">
+                <label for="title">Event Title *</label>
+                <input type="text" id="title" required placeholder="e.g. AI Hackathon 2026">
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category *</label>
+                <select id="category" required>
+                    <option value="Technical">Technical</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Workshop">Workshop</option>
+                </select>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <div class="form-group" style="flex: 1;">
+                    <label for="event_date">Date *</label>
+                    <input type="date" id="event_date" required>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label for="event_time">Time *</label>
+                    <input type="time" id="event_time" value="10:00:00" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="venue">Venue *</label>
+                <input type="text" id="venue" required placeholder="e.g. Seminar Hall 2">
+            </div>
+
+            <div class="form-group">
+                <label for="coordinator">Faculty Coordinator</label>
+                <input type="text" id="coordinator" placeholder="e.g. Prof. Sneha Shah">
+            </div>
+
+            <div class="form-group">
+                <label for="max_seats">Maximum Seats</label>
+                <input type="number" id="max_seats" value="100">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 11px; margin-top: 10px;">Save Event via AJAX</button>
+        </form>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
