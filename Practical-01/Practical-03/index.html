@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Responsive Home | Practical 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">StudentHub</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="register.html" class="nav-link">Register</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Flexbox Hero -->
+        <section class="hero">
+            <h1>Empowering Campus Collaboration</h1>
+            <p>StudentHub connects engineering students with hackathons, academic notices, and hands-on workshops across CHARUSAT FTE.</p>
+            <div class="hero-actions">
+                <a href="events.html" class="btn btn-primary">Browse All Events</a>
+                <a href="register.html" class="btn btn-secondary">Student Sign Up</a>
+            </div>
+        </section>
+
+        <!-- CSS Grid for Featured Announcements -->
+        <h2 style="margin-bottom: 16px; color: var(--primary);">Featured Highlights</h2>
+        <div class="grid-3">
+            <div class="card">
+                <span class="tag-badge">Hackathon</span>
+                <h3 class="card-title">Cognizance 2026</h3>
+                <p class="card-text">Annual 24-hour national hackathon challenging students to solve real-world problems using open source frameworks.</p>
+                <a href="events.html" class="btn btn-primary" style="font-size:12px; padding:6px 12px;">Learn More</a>
+            </div>
+
+            <div class="card">
+                <span class="tag-badge">Workshop</span>
+                <h3 class="card-title">Cloud Computing & DevOps</h3>
+                <p class="card-text">Hands-on session with Docker, CI/CD pipelines, and cloud hosting architecture for third-year IT students.</p>
+                <a href="events.html" class="btn btn-primary" style="font-size:12px; padding:6px 12px;">Learn More</a>
+            </div>
+
+            <div class="card">
+                <span class="tag-badge">Placement</span>
+                <h3 class="card-title">Coding Interview Prep</h3>
+                <p class="card-text">Weekly coding mock tests covering data structures, algorithmic problem solving, and technical HR rounds.</p>
+                <a href="events.html" class="btn btn-primary" style="font-size:12px; padding:6px 12px;">Learn More</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub | Responsive Web Design (CSS Grid & Flexbox) - CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>

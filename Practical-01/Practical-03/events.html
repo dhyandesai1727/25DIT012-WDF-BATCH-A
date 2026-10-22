@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Responsive Events Grid | Practical 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">StudentHub</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="register.html" class="nav-link">Register</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="events.html" class="nav-link active">Events</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 style="color: var(--primary); margin-bottom: 8px;">Explore Events (Responsive CSS Grid)</h1>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">Automatically scales from 1 column on mobile to 2 on tablet and 3 on desktop.</p>
+
+        <div class="grid-3">
+            <div class="card">
+                <div class="event-poster-mock">[ Poster: AI & ML Seminar ]</div>
+                <span class="tag-badge">Technical</span>
+                <h2 class="card-title">AI & Deep Learning Expo</h2>
+                <p class="card-text">Learn generative AI pipelines and neural network foundations with live GPU demos.</p>
+                <p style="font-size: 13px; color: var(--text-muted);"><strong>Date:</strong> Nov 12, 2026 | <strong>Venue:</strong> Lab 1</p>
+            </div>
+
+            <div class="card">
+                <div class="event-poster-mock">[ Poster: Cybersecurity CTF ]</div>
+                <span class="tag-badge">Competition</span>
+                <h2 class="card-title">Campus CTF Challenge</h2>
+                <p class="card-text">Capture the Flag ethical hacking competition. Uncover web vulnerabilities and reverse-engineer crypto clues.</p>
+                <p style="font-size: 13px; color: var(--text-muted);"><strong>Date:</strong> Nov 20, 2026 | <strong>Venue:</strong> IT Lab 4</p>
+            </div>
+
+            <div class="card">
+                <div class="event-poster-mock">[ Poster: Cultural Fest ]</div>
+                <span class="tag-badge">Cultural</span>
+                <h2 class="card-title">Goonj Music & Arts Fest</h2>
+                <p class="card-text">Three days of musical band battles, acoustic evenings, drama skits, and street arts.</p>
+                <p style="font-size: 13px; color: var(--text-muted);"><strong>Date:</strong> Dec 02, 2026 | <strong>Venue:</strong> Amphitheatre</p>
+            </div>
+
+            <div class="card">
+                <div class="event-poster-mock">[ Poster: Roborace ]</div>
+                <span class="tag-badge">Robotics</span>
+                <h2 class="card-title">Robotics Track Derby</h2>
+                <p class="card-text">Design autonomous line-following and obstacle-avoiding bot racers for the campus arena cup.</p>
+                <p style="font-size: 13px; color: var(--text-muted);"><strong>Date:</strong> Dec 10, 2026 | <strong>Venue:</strong> Mechanical Atrium</p>
+            </div>
+
+            <div class="card">
+                <div class="event-poster-mock">[ Poster: Sports Cup ]</div>
+                <span class="tag-badge">Sports</span>
+                <h2 class="card-title">Inter-College Cricket League</h2>
+                <p class="card-text">Annual T20 tournament between departments. Register your departmental squad.</p>
+                <p style="font-size: 13px; color: var(--text-muted);"><strong>Date:</strong> Jan 05, 2027 | <strong>Venue:</strong> University Ground</p>
+            </div>
+
+            <div class="card">
+                <div class="event-poster-mock">[ Poster: Alumni Meet ]</div>
+                <span class="tag-badge">Networking</span>
+                <h2 class="card-title">FTE Alumni Connect 2027</h2>
+                <p class="card-text">Interact with alumni working at Google, Microsoft, TCS, and high-growth Silicon Valley startups.</p>
+                <p style="font-size: 13px; color: var(--text-muted);"><strong>Date:</strong> Jan 15, 2027 | <strong>Venue:</strong> Auditorium</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub | CHARUSAT FTE</p>
+    </footer>
+</body>
+</html>
