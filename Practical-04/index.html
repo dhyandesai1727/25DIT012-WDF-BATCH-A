@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 4 - JavaScript DOM Manipulation & Interactivity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Notification Banner -->
+    <div class="notification-banner" id="notificationBanner" role="alert">
+        <span>📢 <strong>Campus Notice:</strong> Registration for Cognizance 2026 Hackathon closes this Friday at 5:00 PM!</span>
+        <button class="banner-close-btn" id="closeBannerBtn" aria-label="Close Announcement">&times;</button>
+    </div>
+
+    <!-- Header with Hamburger & Theme Switcher -->
+    <header>
+        <div class="nav-wrapper">
+            <span class="brand">StudentHub JS Interactivity</span>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accordion-sec">FAQ Accordion</a></li>
+                <li><a href="#slider-sec">Slider</a></li>
+                <li><a href="#modal-sec">Modal Popup</a></li>
+                <li>
+                    <button class="theme-btn" id="themeToggleBtn">🌙 Dark Mode</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 style="color: var(--primary); margin-bottom: 20px;">Practical 4: Interactive Dynamic UI Components</h1>
+        <p style="margin-bottom: 25px;">This page demonstrates 6 dynamic client-side UI behaviors using vanilla JavaScript DOM manipulation, event listeners, and HTML5 localStorage.</p>
+
+        <!-- Component 2 & 3: Theme Toggle & Hamburger are in navbar -->
+
+        <!-- Component 4: Collapsible FAQ Accordion -->
+        <section class="section-box" id="accordion-sec">
+            <h2>1. Collapsible FAQ Accordion</h2>
+            <p style="margin-bottom: 15px; font-size: 14px; color: var(--text-color);">Click any question below to toggle the accordion panel open or closed.</p>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What are the prerequisite skills for ITUE203?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Basic knowledge of HTML tags, fundamental CSS selectors, and beginner algorithmic logic in C/C++ or Python.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does localStorage persist data across browser refreshes?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p><code>localStorage</code> stores key-value pairs in the client's web browser with no expiration date, remaining available even after the window is closed.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Why attach event listeners with addEventListener()?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p><code>addEventListener</code> maintains clean separation between HTML and JS, allows multiple listeners on the same element, and supports event bubbling/capturing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Component 5: Image / Content Slider -->
+        <section class="section-box" id="slider-sec">
+            <h2>2. Interactive Content & Announcement Slider</h2>
+            <p style="margin-bottom: 15px; font-size: 14px;">Use the Prev/Next buttons or dots below to navigate. Auto-rotates every 5 seconds.</p>
+
+            <div class="slider-container">
+                <div class="slide active-slide">
+                    <h3>🏆 Cognizance 2026: 24h Hackathon</h3>
+                    <p style="margin-top: 10px;">Solve smart campus challenges with IoT & AI. ₹50,000 in cash prizes!</p>
+                </div>
+                <div class="slide">
+                    <h3>💻 Full-Stack Web Sprint</h3>
+                    <p style="margin-top: 10px;">Build and deploy responsive PHP & MySQL portals. Register by this Sunday.</p>
+                </div>
+                <div class="slide">
+                    <h3>🎓 Alumni Mentorship Series</h3>
+                    <p style="margin-top: 10px;">Interact with Google and Microsoft engineers on campus this coming Saturday.</p>
+                </div>
+
+                <button class="slider-btn prev" id="prevSlideBtn" aria-label="Previous Slide">&#10094;</button>
+                <button class="slider-btn next" id="nextSlideBtn" aria-label="Next Slide">&#10095;</button>
+            </div>
+
+            <div class="slider-indicators">
+                <span class="dot active-dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- Component 6: Modal Popup -->
+        <section class="section-box" id="modal-sec">
+            <h2>3. Modal Dialog Box (Popup)</h2>
+            <p style="margin-bottom: 15px; font-size: 14px;">Click the button below to trigger an accessible modal dialog overlay. Supports Escape key and background clicks to close.</p>
+            <button class="action-btn" id="openModalBtn">Launch Event Details Modal</button>
+        </section>
+    </div>
+
+    <!-- Modal Popup Overlay -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="closeModalBtn" aria-label="Close Modal">&times;</button>
+            <h3 id="modalTitle" style="color: var(--primary); margin-bottom: 10px;">Event Registration Confirmation</h3>
+            <p style="font-size: 14px; margin-bottom: 15px;">You are about to register for the <strong>Web Development Hackathon 2026</strong>. Please confirm your registration details before proceeding.</p>
+            <div style="background: rgba(37,99,235,0.08); padding: 12px; border-radius: 6px; font-size: 13px; margin-bottom: 18px;">
+                <p><strong>Student ID:</strong> 25DIT012</p>
+                <p><strong>Department:</strong> Information Technology</p>
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                <button class="action-btn" id="modalActionBtn">Confirm Registration</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
