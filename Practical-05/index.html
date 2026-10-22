@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 5 - Registration Form with JS Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-wrapper">
+        <h1 class="form-title">Student Registration</h1>
+        <p class="form-subtitle">Practical 5: Client-Side Form Validation using JavaScript & Regular Expressions</p>
+
+        <div class="success-banner" id="successBanner" role="alert"></div>
+
+        <form id="studentRegisterForm" novalidate>
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullName">Full Name <span style="color:red;">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Rahul Patel" autocomplete="name">
+                <span class="error-msg" id="nameError"></span>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+                <label for="email">University Email Address <span style="color:red;">*</span></label>
+                <input type="email" id="email" name="email" placeholder="e.g. rahul@charusat.edu.in" autocomplete="email">
+                <span class="error-msg" id="emailError"></span>
+            </div>
+
+            <!-- Mobile Number -->
+            <div class="form-group">
+                <label for="mobile">Mobile Number (10 Digits) <span style="color:red;">*</span></label>
+                <input type="tel" id="mobile" name="mobile" placeholder="e.g. 9876543210" maxlength="10">
+                <span class="error-msg" id="mobileError"></span>
+            </div>
+
+            <!-- Password & Strength Meter -->
+            <div class="form-group">
+                <label for="password">Password <span style="color:red;">*</span></label>
+                <input type="password" id="password" name="password" placeholder="Min. 6 chars with letters & numbers">
+                
+                <div class="strength-meter-container">
+                    <div class="strength-bar-bg">
+                        <div class="strength-bar-fill" id="strengthFill"></div>
+                    </div>
+                    <span class="strength-text" id="strengthText"></span>
+                </div>
+                <span class="error-msg" id="passwordError"></span>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password <span style="color:red;">*</span></label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-type password">
+                <span class="error-msg" id="confirmPasswordError"></span>
+            </div>
+
+            <!-- Course Selection -->
+            <div class="form-group">
+                <label for="course">Academic Department / Course <span style="color:red;">*</span></label>
+                <select id="course" name="course">
+                    <option value="">-- Select Course --</option>
+                    <option value="IT">Information Technology (IT)</option>
+                    <option value="CSE">Computer Science & Engineering (CSE)</option>
+                    <option value="CE">Computer Engineering (CE)</option>
+                </select>
+                <span class="error-msg" id="courseError"></span>
+            </div>
+
+            <!-- Year Selection -->
+            <div class="form-group">
+                <label for="year">Year of Study <span style="color:red;">*</span></label>
+                <select id="year" name="year">
+                    <option value="">-- Select Year --</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+                <span class="error-msg" id="yearError"></span>
+            </div>
+
+            <!-- Gender Radio Buttons -->
+            <div class="form-group">
+                <label>Gender <span style="color:red;">*</span></label>
+                <div class="radio-group">
+                    <label class="checkbox-label">
+                        <input type="radio" name="gender" value="Male"> Male
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="gender" value="Female"> Female
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="gender" value="Other"> Other
+                    </label>
+                </div>
+                <span class="error-msg" id="genderError"></span>
+            </div>
+
+            <!-- Terms and Conditions Checkbox -->
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="terms" name="terms">
+                    I accept the university student code of conduct and computing terms.
+                </label>
+                <span class="error-msg" id="termsError"></span>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Registration</button>
+        </form>
+    </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>
