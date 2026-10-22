@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - Practical 15</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .accordion-btn { width: 100%; text-align: left; padding: 14px 18px; background: white; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 8px; font-weight: bold; color: #1e3a8a; cursor: pointer; display: flex; justify-content: space-between; font-size: 14px; }
+        .accordion-content { display: none; padding: 12px 18px 18px; font-size: 13px; color: #334155; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-wrap">
+        <a href="index.php" class="brand">StudentHub FTE</a>
+        <ul class="nav-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="faq.html" class="active">FAQ</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="login.php">Sign In</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="container">
+    <h1 style="color: #1e3a8a; margin-bottom: 8px;">Frequently Asked Questions</h1>
+    <p style="color: #64748b; margin-bottom: 25px;">Click any question to view answers regarding the StudentHub platform.</p>
+
+    <div class="card">
+        <button class="accordion-btn" onclick="toggleAcc(this)">
+            <span>How does role-based access work?</span>
+            <span>+</span>
+        </button>
+        <div class="accordion-content">
+            User roles are established in the <code>users</code> MySQL table (<code>role ENUM('student', 'admin')</code>). Upon login, the role is stored in <code>$_SESSION['role']</code>. Admin dashboards and student directories enforce authorization checks.
+        </div>
+
+        <button class="accordion-btn" onclick="toggleAcc(this)">
+            <span>What happens during session timeout?</span>
+            <span>+</span>
+        </button>
+        <div class="accordion-content">
+            Sessions have a 15-minute inactivity window. If no requests occur within 900 seconds, the session cookie and session array are safely wiped, and the user is redirected to the sign-in page.
+        </div>
+
+        <button class="accordion-btn" onclick="toggleAcc(this)">
+            <span>Are event posters validated?</span>
+            <span>+</span>
+        </button>
+        <div class="accordion-content">
+            Yes, file uploads in the Event CRUD check file size (&le; 2MB) and extensions (JPG, PNG, GIF) before generating a randomized filename and moving it to the <code>uploads/</code> directory.
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 StudentHub Integrated Portal</p>
+</footer>
+
+<script>
+function toggleAcc(btn) {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector("span:last-child");
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        icon.textContent = "+";
+    } else {
+        content.style.display = "block";
+        icon.textContent = "-";
+    }
+}
+</script>
+
+</body>
+</html>

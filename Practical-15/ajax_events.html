@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live AJAX Events - StudentHub Practical 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="nav-wrap">
+        <a href="index.php" class="brand">StudentHub FTE</a>
+        <ul class="nav-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="ajax_events.html" class="active">Live AJAX Events</a></li>
+            <li><a href="login.php">Sign In</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <div>
+            <h1 style="color: #1e3a8a;">Live AJAX Event Viewer & CRUD</h1>
+            <p style="color: #64748b; font-size: 14px;">Asynchronous data communication using JavaScript <code>fetch()</code> API</p>
+        </div>
+        <button class="btn btn-success" onclick="document.getElementById('ajaxModal').style.display='block';">+ Add Event (AJAX)</button>
+    </div>
+
+    <div id="ajaxAlert" style="display:none; padding:12px; border-radius:6px; margin-bottom:15px; font-size:14px;"></div>
+
+    <div class="card" style="padding: 0; overflow-x: auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Venue</th>
+                    <th>Coordinator</th>
+                    <th style="text-align: center;">Action</th>
+                </tr>
+            </thead>
+            <tbody id="ajaxTableBody">
+                <tr><td colspan="7" style="text-align:center; padding:20px;">Loading events...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<div id="ajaxModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:100;">
+    <div style="background:white; max-width:480px; margin:50px auto; padding:25px; border-radius:8px; position:relative;">
+        <button onclick="document.getElementById('ajaxModal').style.display='none';" style="position:absolute; right:15px; top:15px; background:none; border:none; font-size:20px; cursor:pointer;">&times;</button>
+        <h3 style="color:#1e3a8a; margin-bottom:15px;">Create Event via Fetch API</h3>
+        <form id="ajaxForm">
+            <div class="form-group"><label>Event Title *</label><input type="text" id="evTitle" required></div>
+            <div class="form-group">
+                <label>Category</label>
+                <select id="evCat"><option value="Technical">Technical</option><option value="Cultural">Cultural</option><option value="Sports">Sports</option></select>
+            </div>
+            <div class="form-group"><label>Date *</label><input type="date" id="evDate" required></div>
+            <div class="form-group"><label>Venue *</label><input type="text" id="evVenue" required></div>
+            <div class="form-group"><label>Coordinator</label><input type="text" id="evCoord"></div>
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:10px;">Submit via AJAX</button>
+        </form>
+    </div>
+</div>
+
+<script>
+function showAlert(msg, isErr) {
+    const el = document.getElementById("ajaxAlert");
+    el.style.display = "block";
+    el.className = isErr ? "alert alert-error" : "alert alert-success";
+    el.textContent = msg;
+    setTimeout(() => { el.style.display = "none"; }, 4000);
+}
+
+function loadAjaxEvents() {
+    fetch("api/events_api.php")
+        .then(r => r.json())
+        .then(d => {
+            const tbody = document.getElementById("ajaxTableBody");
+            tbody.innerHTML = "";
+            d.data.forEach(e => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>#${e.id}</td>
+                    <td><strong>${e.title}</strong></td>
+                    <td><span class="badge" style="background:#e0f2fe; color:#0369a1;">${e.category}</span></td>
+                    <td>${e.event_date}</td>
+                    <td>${e.venue}</td>
+                    <td>${e.coordinator || 'N/A'}</td>
+                    <td style="text-align:center;">
+                        <button class="btn btn-danger" style="padding:2px 8px; font-size:11px;" onclick="deleteAjaxEvent(${e.id})">Delete</button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        });
+}
+
+function deleteAjaxEvent(id) {
+    if (!confirm("Delete event #" + id + "?")) return;
+    fetch("api/events_api.php", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({action: "delete", id: id})
+    }).then(r => r.json()).then(res => {
+        showAlert(res.message, res.status === "error");
+        loadAjaxEvents();
+    });
+}
+
+document.getElementById("ajaxForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const payload = {
+        action: "add",
+        title: document.getElementById("evTitle").value,
+        category: document.getElementById("evCat").value,
+        event_date: document.getElementById("evDate").value,
+        venue: document.getElementById("evVenue").value,
+        coordinator: document.getElementById("evCoord").value
+    };
+    fetch("api/events_api.php", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(payload)
+    }).then(r => r.json()).then(res => {
+        showAlert(res.message, res.status === "error");
+        document.getElementById("ajaxModal").style.display = "none";
+        document.getElementById("ajaxForm").reset();
+        loadAjaxEvents();
+    });
+});
+
+loadAjaxEvents();
+</script>
+
+</body>
+</html>
