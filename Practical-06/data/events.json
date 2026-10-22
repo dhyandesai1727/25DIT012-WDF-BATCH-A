@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "Cognizance 2026 Hackathon",
+    "category": "Technical",
+    "date": "2026-11-15",
+    "venue": "IT Lab 3",
+    "coordinator": "Dr. Amit Patel",
+    "seats": 120,
+    "description": "24-hour national open-source software and IoT development hackathon."
+  },
+  {
+    "id": 2,
+    "title": "AI & Deep Learning Hands-On",
+    "category": "Technical",
+    "date": "2026-11-20",
+    "venue": "Seminar Hall 1",
+    "coordinator": "Prof. Sneha Shah",
+    "seats": 80,
+    "description": "Practical workshop covering transformer architectures and neural networks."
+  },
+  {
+    "id": 3,
+    "title": "Goonj Annual Cultural Night",
+    "category": "Cultural",
+    "date": "2026-12-05",
+    "venue": "Central Amphitheatre",
+    "coordinator": "Prof. Rajesh Joshi",
+    "seats": 500,
+    "description": "Celebration of music, band competitions, acoustic sets, and theatrical skits."
+  },
+  {
+    "id": 4,
+    "title": "Inter-Department Cricket Tournament",
+    "category": "Sports",
+    "date": "2026-12-10",
+    "venue": "University Sports Ground",
+    "coordinator": "Coach Vikram Singh",
+    "seats": 160,
+    "description": "Annual 8-a-side leather ball cricket championship between departments."
+  },
+  {
+    "id": 5,
+    "title": "Full-Stack Web Sprint",
+    "category": "Technical",
+    "date": "2026-11-25",
+    "venue": "Computer Lab 4",
+    "coordinator": "Prof. Hardik Dave",
+    "seats": 60,
+    "description": "Rapid frontend and backend API integration challenge using PHP and MySQL."
+  },
+  {
+    "id": 6,
+    "title": "Campus Cyber CTF Hunt",
+    "category": "Technical",
+    "date": "2026-12-02",
+    "venue": "Network Security Lab",
+    "coordinator": "Dr. Pratik Mehta",
+    "seats": 75,
+    "description": "Capture the Flag ethical hacking challenge with real web vulnerabilities."
+  },
+  {
+    "id": 7,
+    "title": "Battle of Bands: Rock & Classical",
+    "category": "Cultural",
+    "date": "2026-12-18",
+    "venue": "Open Air Theatre",
+    "coordinator": "Prof. Ritu Sharma",
+    "seats": 350,
+    "description": "Electric guitar riffs, drum solos, and fusion music performances by college bands."
+  },
+  {
+    "id": 8,
+    "title": "Spoural Badminton Championship",
+    "category": "Sports",
+    "date": "2026-12-12",
+    "venue": "Indoor Sports Complex",
+    "coordinator": "Coach Neha Trivedi",
+    "seats": 64,
+    "description": "Singles and doubles knockout badminton matches for boys and girls."
+  },
+  {
+    "id": 9,
+    "title": "Cloud DevOps & Kubernetes Boot Camp",
+    "category": "Technical",
+    "date": "2026-11-28",
+    "venue": "Virtual Cloud Lab",
+    "coordinator": "Prof. Mayur Parmar",
+    "seats": 90,
+    "description": "Containerizing microservices and managing cluster deployments on AWS/GCP."
+  },
+  {
+    "id": 10,
+    "title": "National Traditional Dance Showcase",
+    "category": "Cultural",
+    "date": "2026-12-22",
+    "venue": "Main Auditorium",
+    "coordinator": "Prof. Kavita Desai",
+    "seats": 400,
+    "description": "Garba, Bhangra, and classical dance performances by student cultural troupes."
+  },
+  {
+    "id": 11,
+    "title": "Autonomous Robotics Obstacle Derby",
+    "category": "Technical",
+    "date": "2027-01-08",
+    "venue": "Mechanical Quadrangle",
+    "coordinator": "Dr. Jignesh Solanki",
+    "seats": 50,
+    "description": "Line-following and maze-solving Arduino/Raspberry Pi robotics contest."
+  },
+  {
+    "id": 12,
+    "title": "Table Tennis Open League",
+    "category": "Sports",
+    "date": "2027-01-12",
+    "venue": "Student Activity Center",
+    "coordinator": "Coach Vikram Singh",
+    "seats": 32,
+    "description": "Fast-paced table tennis matches following ITTF rules."
+  },
+  {
+    "id": 13,
+    "title": "UI/UX Figma Design Sprint",
+    "category": "Technical",
+    "date": "2027-01-18",
+    "venue": "Design Studio Lab",
+    "coordinator": "Prof. Pooja Parekh",
+    "seats": 55,
+    "description": "Design accessible mobile application wireframes and high-fidelity mockups."
+  },
+  {
+    "id": 14,
+    "title": "Short Film & Photography Contest",
+    "category": "Cultural",
+    "date": "2027-01-22",
+    "venue": "Media Center Hall",
+    "coordinator": "Prof. Devang Patel",
+    "seats": 100,
+    "description": "Screening of 5-minute campus short films followed by jury grading."
+  },
+  {
+    "id": 15,
+    "title": "Annual Athletics Track & Field",
+    "category": "Sports",
+    "date": "2027-01-28",
+    "venue": "Athletic Stadium",
+    "coordinator": "Coach Neha Trivedi",
+    "seats": 200,
+    "description": "100m sprint, 400m relay, long jump, and shot put university meet."
+  }
+]

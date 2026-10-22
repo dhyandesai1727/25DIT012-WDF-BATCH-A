@@ -1,0 +1,17 @@
+[
+  { "id": 1, "name": "Rahul Patel", "roll": "25DIT012", "department": "IT", "year": "3rd", "email": "rahul.patel@charusat.edu.in", "cgpa": 8.85 },
+  { "id": 2, "name": "Aarav Shah", "roll": "25DIT001", "department": "IT", "year": "3rd", "email": "aarav.shah@charusat.edu.in", "cgpa": 9.10 },
+  { "id": 3, "name": "Diya Joshi", "roll": "25DCE045", "department": "CE", "year": "2nd", "email": "diya.joshi@charusat.edu.in", "cgpa": 8.40 },
+  { "id": 4, "name": "Rohan Sharma", "roll": "25DCSE089", "department": "CSE", "year": "4th", "email": "rohan.sharma@charusat.edu.in", "cgpa": 7.95 },
+  { "id": 5, "name": "Ananya Dave", "roll": "25DIT023", "department": "IT", "year": "3rd", "email": "ananya.dave@charusat.edu.in", "cgpa": 9.35 },
+  { "id": 6, "name": "Kavya Trivedi", "roll": "25DCE018", "department": "CE", "year": "1st", "email": "kavya.trivedi@charusat.edu.in", "cgpa": 8.15 },
+  { "id": 7, "name": "Manav Mehta", "roll": "25DCSE014", "department": "CSE", "year": "2nd", "email": "manav.mehta@charusat.edu.in", "cgpa": 8.70 },
+  { "id": 8, "name": "Pooja Varma", "roll": "25DIT056", "department": "IT", "year": "4th", "email": "pooja.varma@charusat.edu.in", "cgpa": 8.90 },
+  { "id": 9, "name": "Karan Solanki", "roll": "25DCE092", "department": "CE", "year": "3rd", "email": "karan.solanki@charusat.edu.in", "cgpa": 7.80 },
+  { "id": 10, "name": "Ishita Desai", "roll": "25DCSE033", "department": "CSE", "year": "1st", "email": "ishita.desai@charusat.edu.in", "cgpa": 9.05 },
+  { "id": 11, "name": "Harsh Patel", "roll": "25DIT078", "department": "IT", "year": "2nd", "email": "harsh.patel@charusat.edu.in", "cgpa": 8.25 },
+  { "id": 12, "name": "Tanvi Parmar", "roll": "25DCE060", "department": "CE", "year": "4th", "email": "tanvi.parmar@charusat.edu.in", "cgpa": 8.60 },
+  { "id": 13, "name": "Dev Soni", "roll": "25DCSE102", "department": "CSE", "year": "3rd", "email": "dev.soni@charusat.edu.in", "cgpa": 7.90 },
+  { "id": 14, "name": "Khushi Bhatt", "roll": "25DIT041", "department": "IT", "year": "1st", "email": "khushi.bhatt@charusat.edu.in", "cgpa": 8.55 },
+  { "id": 15, "name": "Yash Makwana", "roll": "25DCSE077", "department": "CSE", "year": "2nd", "email": "yash.makwana@charusat.edu.in", "cgpa": 8.30 }
+]

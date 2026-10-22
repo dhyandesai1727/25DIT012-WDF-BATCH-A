@@ -1,0 +1,17 @@
+[
+  { "id": 1, "category": "General", "question": "What is StudentHub?", "answer": "StudentHub is the unified digital portal for students and faculty of CHARUSAT FTE." },
+  { "id": 2, "category": "General", "question": "Who can register on the portal?", "answer": "Any active student enrolled in IT, CSE, or CE programs at FTE." },
+  { "id": 3, "category": "Account", "question": "How do I reset my password?", "answer": "Contact the IT department lab coordinator or submit a reset request on the contact page." },
+  { "id": 4, "category": "Account", "question": "Can I change my registered email address?", "answer": "Student email addresses are linked with university IDs and can only be altered by department admins." },
+  { "id": 5, "category": "Events", "question": "How do I register for campus hackathons?", "answer": "Navigate to the Events tab, select the event card, and click 'Register'." },
+  { "id": 6, "category": "Events", "question": "Are there certificates for attending workshops?", "answer": "Yes, verified digital participation certificates are awarded to attendees." },
+  { "id": 7, "category": "Events", "question": "Can I cancel my event registration?", "answer": "Yes, cancellations can be made up to 24 hours prior to the event start time." },
+  { "id": 8, "category": "Technical", "question": "What browsers are supported?", "answer": "Google Chrome, Mozilla Firefox, Microsoft Edge, and Apple Safari." },
+  { "id": 9, "category": "Technical", "question": "Why does the portal remember my dark mode choice?", "answer": "Your theme preference is saved in your browser's localStorage." },
+  { "id": 10, "category": "Academic", "question": "Where can I view my semester attendance?", "answer": "Academic attendance summaries are updated bi-weekly on the student dashboard." },
+  { "id": 11, "category": "Academic", "question": "When are mid-semester results announced?", "answer": "Within 10 working days following the conclusion of exams." },
+  { "id": 12, "category": "Admin", "question": "How can faculty coordinators post new events?", "answer": "Faculty use the Admin dashboard under Event Management with poster upload capabilities." },
+  { "id": 13, "category": "Admin", "question": "What image formats are supported for event posters?", "answer": "JPEG, PNG, and GIF formats up to 2 megabytes." },
+  { "id": 14, "category": "Events", "question": "Can external college students join our TechFest?", "answer": "Yes, national events like Cognizance are open to all AICTE/UGC accredited colleges." },
+  { "id": 15, "category": "General", "question": "How can I contact technical support?", "answer": "Email it.support@charusat.ac.in or visit Lab 3 during laboratory hours." }
+]

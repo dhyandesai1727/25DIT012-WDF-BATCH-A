@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 6 - Fetch API, Search, Filter & Pagination</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header-bar">
+            <h1>StudentHub Data Explorer (Fetch API)</h1>
+            <p>Practical 6: Asynchronous JSON rendering with real-time search, category filtering, sorting, and pagination.</p>
+        </header>
+
+        <!-- Dataset Tabs -->
+        <div class="tabs-container">
+            <button class="tab-btn active" data-type="events">Campus Events (15)</button>
+            <button class="tab-btn" data-type="students">Student Profiles (15)</button>
+            <button class="tab-btn" data-type="faqs">Portal FAQs (15)</button>
+        </div>
+
+        <!-- Controls: Search, Filter, Sort -->
+        <div class="controls-card">
+            <div class="control-item">
+                <label for="searchInput">Search Query</label>
+                <input type="text" id="searchInput" placeholder="Search by name, title, roll no...">
+            </div>
+
+            <div class="control-item">
+                <label for="categoryFilter">Filter by Category</label>
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+
+            <div class="control-item">
+                <label for="sortSelect">Sort Results</label>
+                <select id="sortSelect">
+                    <option value="name_asc">Alphabetical (A - Z)</option>
+                    <option value="name_desc">Alphabetical (Z - A)</option>
+                    <option value="id_asc">ID (Lowest First)</option>
+                    <option value="id_desc">ID (Highest First)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Error / Offline Notice -->
+        <div class="error-banner" id="errorBanner"></div>
+
+        <!-- Status Message (Loading) -->
+        <div class="status-msg" id="statusMsg">Loading data...</div>
+
+        <!-- Cards Grid -->
+        <main class="cards-grid" id="cardsGrid" aria-live="polite"></main>
+
+        <!-- Pagination Controls -->
+        <footer class="pagination-container">
+            <span class="page-info" id="pageInfo">Showing 0 of 0</span>
+            <div class="page-buttons" id="pageButtons"></div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
